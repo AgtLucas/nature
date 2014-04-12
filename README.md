@@ -1,4 +1,3 @@
-nature
-======
+###Nature
 
-#nature pictures
+Inspired by https://github.com/weblancaster/instagram-real-time
