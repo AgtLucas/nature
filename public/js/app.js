@@ -15,6 +15,7 @@
      * Application initialization method / call for the methods being initialized in order
      */
     init: function () {
+      this.mostRecent();
       this.getData();
     },
 
@@ -85,6 +86,22 @@
 
       });
 
+    },
+
+    /**
+     * Render most recent pics
+     */
+    mostRecent: function () {
+      socket.on('firstShow', function (data) {
+        var clean = $('.img-content').find('a').remove(),
+          query = data,
+          source = $('.first-show-tpl').html(),
+          compiledTemplate = Handlebars.compile(source),
+          result = compiledTemplate(query),
+          imgWrap = $('.img-content');
+
+        imgWrap.html(result);
+      });
     },
 
   }
