@@ -58,6 +58,33 @@
       lastSrc = $('.img-content a:first-child').find('img').attr('src');
       nextSrc = $('.img-content a:nth-child(2)').find('img').attr('src');
 
+      if (lastSrc === nextSrc) {
+        last.remove();
+      }
+
+      last = $('.img-content').find(':first-child').removeClass('inst-natr');
+
+      if (w >= 900) {
+        lastAnimate = $('.img-content').find(':nth-child(2)').addClass('animated fadeInLeft');
+      }
+
+      if (w <= 900) {
+        lastAnimate = $('.img-content').find(':nth-child(1)').addClass('animated fadeInDown');
+      }
+
+      $(window).resize(function () {
+        var w = $(document).width();
+
+        if (w >= 900) {
+          lastAnimate = $('.img-content').find(':nth-child(2)').addClass('animated fadeInLeft');
+        }
+
+        if (w >= 900) {
+          lastAnimate = $('.img-content').find(':nth-child(1)').addClass('animated fadeInDown');
+        }
+
+      });
+
     },
 
   }
