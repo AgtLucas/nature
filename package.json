@@ -24,7 +24,8 @@
     "socket.io": "^0.9.16",
     "cookie-parser": "^1.0.1",
     "body-parser": "^1.0.2",
-    "method-override": "^1.0.0"
+    "method-override": "^1.0.0",
+    "connect": "^2.14.4"
   },
   "devDependencies": {
     "grunt-contrib-compass": "^0.7.2",
