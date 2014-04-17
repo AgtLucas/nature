@@ -1,6 +1,7 @@
 'use strict';
 
 var express = require('express');
+var connect = require('connect');
 var app = express();
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
@@ -65,7 +66,7 @@ io.configure(function () {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
-app.use(express.methodOverride());
+app.use(require(methodOverride)());
 app.use(app.router);
 app.use(express.static(pub));
 app.use(express.static(view));
