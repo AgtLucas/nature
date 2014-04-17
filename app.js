@@ -67,7 +67,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(require('method-override')());
-app.use(app.router);
 app.use(express.static(pub));
 app.use(express.static(view));
 app.use(express.errorHandler());
