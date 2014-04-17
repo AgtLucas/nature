@@ -48,7 +48,7 @@
         current = data.data[0].images.standard_resolution.url,
         w = $(document).width(),
         query = data,
-        source = $('.most-recent-tpl').html(),
+        source = $('#most-recent-tpl').html(),
         compiledTemplate = Handlebars.complete(source),
         result = compiledTemplate(query),
         imgWrap = $('.img-content');
