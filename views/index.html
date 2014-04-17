@@ -9,6 +9,12 @@
 
   <div class="img-content"></div>
 
+  <script id="most-recent-tpl" type="text/x-handlebars-template">
+    <a href="{{data.1.link}}" title="{{data.1.caption.text}}" target="_blank">
+      <img src="{{data.1.images.standard_resolution.url}}" alt="{{data.1.caption.text}}" />
+    </a>
+  </script>
+
   <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/requirejs-handlebars/0.0.2/hbars.js"></script>
