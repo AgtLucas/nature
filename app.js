@@ -60,14 +60,12 @@ io.configure(function () {
  * App main configuration
  *
  */
-app.configure(function () {
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
-  app.use(express.static(pub));
-  app.use(express.static(view));
-  app.use(express.errorHandler());
-});
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
+app.use(express.static(pub));
+app.use(express.static(view));
+app.use(express.errorHandler());
 
 /**
  * Render index view
