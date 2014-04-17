@@ -69,7 +69,7 @@ app.use(cookieParser());
 app.use(require('method-override')());
 app.use(express.static(pub));
 app.use(express.static(view));
-app.use(express.errorHandler());
+app.use(require('errorhandler')());
 
 /**
  * Render index view
