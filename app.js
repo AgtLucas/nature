@@ -2,6 +2,8 @@
 
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var port = process.env.PORT || 3000;
 var io = require('socket.io').listen(app.listen(port));
 var Instagram = require('instagram-node-lib');
@@ -60,7 +62,9 @@ io.configure(function () {
  * App main configuration
  *
  */
-app.use(express.bodyParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+app.use(cookieParser());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(pub));
